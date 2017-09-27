@@ -34,10 +34,10 @@
 	   	console.log(minAway);
 	   	
 	    // shows time to next bus
-	    var next = moment(now).add(minAway, 'minutes');
+	    var next = now.add(minAway, 'minutes');
 	    
-	    var nextTime = moment(next).format('hh:mm');
-	    console.log(nextTime);
+
+	    console.log(next);
     	
 
 	    // Capture Button Click
