@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 
@@ -13,13 +13,68 @@
 </head>
 <body>
 
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10">
+				<div class="jumbotron">
+				  <h1>Anytime is train time!</h1>
+				  <p>Choo Choo. Chee Chee.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<!-- table of data -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10">
+				<div class="panel panel-primary">
+				  <div class="panel-heading">
+				  	<h3 class="panel-title">Current Train Schedule</h3>
+				  </div>
+				  <div class="panel-body" id="employeeList">
+				    <span>Train Name</span>
+				    <span>Destination</span>
+				    <span>Frequency (Min)</span>
+				    <span>Next Arrival</span>
+				    <span>Minutes Away</span>
+				    <hr>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
-
-
-
-
-
+		<!-- input section -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10">
+				<div class="panel panel-primary">
+				  <div class="panel-heading">
+				  	<h3 class="panel-title">Add Train</h3>
+				  </div>
+				  <div class="panel-body">
+				    <form">
+					  Train Name:<br>
+					  <input type="text" name="name" id="name-input" value="">
+					  <br>
+					  Destination:<br>
+					  <input type="text" name="destination" id="destination-input" value="">
+					  <br>
+					  First Train Time:<br>
+					  <input type="text" name="first" id="first-train-input" value="">
+					  <br>
+					  Frequency:<br>
+					  <input type="text" name="frequency" id="frequency-input" value="">
+					  <br>
+					  <input type="submit" value="Submit" id="add-user">
+					</form>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- jQuery Link -->
 	<script
@@ -28,7 +83,7 @@
 	  crossorigin="anonymous"></script>
 	<!-- Firebase link -->
 	<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
-	
+
 	<script type="text/javascript" src="assets/javascript/app.js"></script>
 
 </body>
