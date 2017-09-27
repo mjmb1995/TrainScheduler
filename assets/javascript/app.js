@@ -62,7 +62,8 @@
       console.log(sv.rate);
 
       // Change the HTML to reflect - single change
-      $("#trainList").append('<div id="addTrain"><span>' + name + '</span><span>' + destination + '</span><span>' + frequency + '</span><span>' + next + '</span><span>' + minAway + '</span></div>');
+      $("#trainList").append('<div id="addTrain"><span class="data">' + name + '</span><span class="data">' + destination + '</span><span class="data">' + frequency + '</span><span class="data">' + next + '</span><span class="data">' + minAway + '</span></div>');
+      $("#trainList").append('<hr class="style-two">');
 
 
 
