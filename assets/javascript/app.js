@@ -15,13 +15,29 @@
     	// Initial Values
 	    var name = "";
 	    var destination = "";
-	    var frequency = "";
-	    var first = ""
-	    var next = "";
-	    var minAway= "";
+	    var frequency = "5";
+	    var first = "10:30"
+	    //converting user input to be able to use in moment.js
+	    var firstMoment = moment(first, 'hh:mm');
+	    //converting the moment variable with same format as "now"
+	    var firstMoment2 = moment(firstMoment).format('hh:mm');
+	    
+	    
+	    // shows time in hours and min
+	    var now = moment().format('hh:mm');
 
-
-    	var randomFormat = "MM/DD/YYYY";
+	    // calculates time until next bus
+	    var nowMin = moment.duration(now).asMinutes();
+	   	var firstMin = moment.duration(firstMoment2).asMinutes();
+	   	var nextArrival = (nowMin - firstMin) % frequency;
+	   	var minAway = frequency - nextArrival;
+	   	console.log(minAway);
+	   	
+	    // shows time to next bus
+	    var next = moment(now).add(minAway, 'minutes');
+	    
+	    var nextTime = moment(next).format('hh:mm');
+	    console.log(nextTime);
     	
 
 	    // Capture Button Click
@@ -35,7 +51,11 @@
       // var convertedDate = moment(startDate, randomFormat);
       // monthsWorked = (convertedDate).diff(moment(), "months")
       first = $("#first-train-input").val().trim();
+
  
+
+
+
 
       // Code for handling the push into firebase
       database.ref().push({
